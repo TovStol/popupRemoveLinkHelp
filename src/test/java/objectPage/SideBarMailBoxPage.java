@@ -6,11 +6,12 @@ public class SideBarMailBoxPage {
     String deleteFolder = "[data-title=\"Удалённые\"]";
     String clearButton = ".mail-NestedList-Item-Clean";
 
-    public SideBarMailBoxPage clickDeletedFolder(){
+    public SideBarMailBoxPage clickDeletedFolder() {
         $(deleteFolder).click();
         return this;
     }
-    public void clickClearButton(){
+
+    public void clickClearButton() {
         $(clearButton).hover().click();
     }
 }

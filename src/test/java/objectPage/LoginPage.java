@@ -16,12 +16,14 @@ public class LoginPage {
         $(enterButton).shouldBe(visible);
         return this;
     }
+
     public LoginPage mailLoginMode() {
         if ($(phoneInputField).exists()) {
             $(changeModeLoginButton, 0).parent().click();
         }
         return this;
     }
+
     public void inputLogin(String login) {
         $(loginField).setValue(login);
         $(enterButton).click();

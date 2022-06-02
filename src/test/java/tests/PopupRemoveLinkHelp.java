@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.switchTo;
+import static com.codeborne.selenide.Selenide.webdriver;
 
 public class PopupRemoveLinkHelp {
     @BeforeAll
@@ -54,7 +55,10 @@ public class PopupRemoveLinkHelp {
         sideBarMailBoxPage
                 .clickClearButton();
         clearFolderPopup
-                .checkExistButtonAndPopup();
-
+                .checkExistButtonAndPopup()
+                .clickConfirmButton();
+        webdriver().object().navigate().back();
+        inboxPage
+                .smokeCheckPage();
     }
 }

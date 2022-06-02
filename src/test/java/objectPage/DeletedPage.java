@@ -4,10 +4,11 @@ import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selenide.$;
 
 public class DeletedPage {
+    String clearFolderLink = "[action=\"folder.clear\"]";
 
-public DeletedPage checkExistEmail(){
-    $("[action=\"folder.clear\"]").shouldBe(exist);
-    return this;
-}
+    public DeletedPage checkExistEmail() {
+        $(clearFolderLink).shouldBe(exist);
+        return this;
+    }
 }
 

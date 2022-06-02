@@ -13,18 +13,16 @@ public class InboxPage {
     String confirmDeleteButton = "button.js-confirm-mops";
 
 
-
     public InboxPage smokeCheckPage() {
         $(toWriteButton).shouldBe(visible);
         $(listOfLetters).shouldBe(exist);
         return this;
     }
-    public InboxPage deleteAllLetters(){
+
+    public InboxPage deleteAllLetters() {
         $(selectEmailButton).click();
         $(deleteEmailButton).click();
         //$(confirmDeleteButton).click();
         return this;
     }
-
-
 }
